@@ -1,4 +1,4 @@
-buad400_test_repo
-=================
+Welcome to BUAD 400 - Fall 2014!
+==============
 
-I am changing this.
+This is the course repository. Please update regularly to get the latest code samples.
