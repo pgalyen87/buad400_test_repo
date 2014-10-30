@@ -195,11 +195,11 @@ def findPhrases(words, number, max):
 							index+= len(word)-1
 					else:
 							index+= len(word)
-					
+				
 				if word in numbers:
 					count+=1
-					i = temp.index(word)
-					if number[index] == word:
+						
+					if number[i] == word:
 						index += 1
 						
 			if index == 6 and count <= max:
@@ -232,8 +232,7 @@ def findPhrases(words, number, max):
 					
 				if word in numbers:
 					count+=1
-					i = temp.index(word)
-					if number[index] == word:
+					if number[i] == word:
 						index+=1
 						
 			if index == 6 and count <= max:
@@ -263,8 +262,7 @@ def findPhrases(words, number, max):
 					
 				if word in numbers:
 					count+=1
-					i = temp.index(word)
-					if number[index] == word:
+					if number[i] == word:
 						index+=1
 						
 			if index == 6 and count <= max:
@@ -294,8 +292,7 @@ def findPhrases(words, number, max):
 					
 				if word in numbers:
 					count+=1
-					i = temp.index(word)
-					if number[index] == word:
+					if number[i] == word:
 						index+=1
 						
 			if index == 6 and count <= max:
@@ -325,8 +322,7 @@ def findPhrases(words, number, max):
 					
 				if word in numbers:
 					count+=1
-					i = temp.index(word)
-					if number[index] == word:
+					if number[i] == word:
 						index+=1
 						
 			if index == 6 and count <= max:
