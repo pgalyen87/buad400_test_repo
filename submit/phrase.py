@@ -139,7 +139,8 @@ def findPhrases(words, number, max):
 	
 	phrases = []
 	numbers = ['1','2','3','4','5','6','7','8','9','0']
-	
+	print number
+	print "\n"
 
 	words2 = flatten(words)
 	for i in range(len(number)):
@@ -170,7 +171,8 @@ def findPhrases(words, number, max):
 						index+=1
 						
 			if index == 6 and count<= max:
-				newphrases.append(temp)
+				if temp not in newphrases:
+					newphrases.append(temp)
 			
 		
 	print newphrases
@@ -197,11 +199,12 @@ def findPhrases(words, number, max):
 				if word in numbers:
 					count+=1
 					i = temp.index(word)
-					if number[i] == word:
-						index+=1
+					if number[index] == word:
+						index += 1
 						
 			if index == 6 and count <= max:
-				newphrases.append(temp)
+				if temp not in newphrases:
+					newphrases.append(temp)
 			
 		
 	print newphrases
@@ -230,11 +233,12 @@ def findPhrases(words, number, max):
 				if word in numbers:
 					count+=1
 					i = temp.index(word)
-					if number[i] == word:
+					if number[index] == word:
 						index+=1
 						
 			if index == 6 and count <= max:
-				newphrases.append(temp)
+				if temp not in newphrases:
+					newphrases.append(temp)
 			
 		
 	print newphrases
@@ -260,11 +264,12 @@ def findPhrases(words, number, max):
 				if word in numbers:
 					count+=1
 					i = temp.index(word)
-					if number[i] == word:
+					if number[index] == word:
 						index+=1
 						
 			if index == 6 and count <= max:
-				newphrases.append(temp)
+				if temp not in newphrases:
+					newphrases.append(temp)
 			
 		
 	print newphrases
@@ -290,11 +295,12 @@ def findPhrases(words, number, max):
 				if word in numbers:
 					count+=1
 					i = temp.index(word)
-					if number[i] == word:
+					if number[index] == word:
 						index+=1
 						
 			if index == 6 and count <= max:
-				newphrases.append(temp)
+				if temp not in newphrases:
+					newphrases.append(temp)
 			
 		
 	print newphrases
@@ -320,11 +326,12 @@ def findPhrases(words, number, max):
 				if word in numbers:
 					count+=1
 					i = temp.index(word)
-					if number[i] == word:
+					if number[index] == word:
 						index+=1
 						
 			if index == 6 and count <= max:
-				newphrases.append(temp)
+				if temp not in newphrases:
+					newphrases.append(temp)
 			
 		
 	print newphrases
