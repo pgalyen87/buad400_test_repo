@@ -57,9 +57,14 @@ def build_word_cloud_list(sentiment_score_dict, n, filename, word_count = 0, dir
 	
 	wfile = open("./" + filename + '.txt', 'w')
 	for word in top_n:
-		for i in range((int)(abs(word[1])*10) + (word_count[word[0]] * 10)):
+		if type(word_count) == type({}):
+			wordCount = word_count[word[0]]
+		else:
+			wordCount = 0
+			
+		for i in range((int)(abs(word[1])*10) + ( wordCount* 10)):
 			wfile.write(word[0] +" ")
-	wfile.write("\n")	
+		wfile.write("\n")	
 	wfile.close()
 	
 
