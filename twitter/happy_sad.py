@@ -39,8 +39,12 @@ def infer_word_sentiments(codes, text):
 
 
 def infer_tweet_word_sentiments(codes, tweets):
-	x=1
-
+	tweetText = []
+	for t in tweets:
+		tweetText.append(text(t, ['text']))
+		
+	inferred, word_count = infer_word_sentiments(codes, tweetText)
+	return inferred, word_count
 
 def top_n_words(sentiment_score_dict, n, direction =1):
 	if direction == 0:	
@@ -51,7 +55,7 @@ def top_n_words(sentiment_score_dict, n, direction =1):
 
 
 
-def build_word_cloud_list(sentiment_score_dict, n, filename, word_count = 0, direction =1):
+def build_word_cloud_list(sentiment_score_dict, n, filename, direction =1, word_count = 0):
 	
 	top_n = top_n_words(sentiment_score_dict, n, direction)
 	
@@ -71,14 +75,14 @@ def build_word_cloud_list(sentiment_score_dict, n, filename, word_count = 0, dir
 
 
 
-def score_sentiments(codes, tweets, n, direction = 1, filename = None):
+def score_sentiments(codes, tweets, direction = 1, filename = None, n = 10):
 	
-	sentiment_codes, word_count = infer_word_sentiments(codes, tweets)
+	sentiment_codes, word_count = infer_tweet_word_sentiments(codes, tweets)
 	
 	print top_n_words(sentiment_codes, n, direction)
 	
 	if filename != None:
-			build_word_cloud_list(sentiment_codes, n, filename, word_count, direction)
+			build_word_cloud_list(sentiment_codes, n, filename, direction, word_count)
 
 
 
